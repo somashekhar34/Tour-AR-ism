@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.saad.hci">
+
+    <application
+        android:name=".Class_MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_logo"
+        android:label="@string/app_name"
+        android:theme="@style/MyMaterialTheme">
+        <activity android:name=".RuntimePermissionRequestActivity">
+
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".ListDisplayActivity"
+            android:label="@string/title_activity_list_display"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name="com.example.saad.hci.AugmentedActivity" android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- poi detail screen -->
+        <!-- cam activities -->
+        <!-- URL Launcher -->
+        <!-- in case mediaplayer is used -->
+        <!-- cam activities -->
+      <!-- in case mediaplayer is used -->
+        <activity
+            android:name="com.wikitude.tools.activities.MediaPlayerActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Tell the system this app requires OpenGL ES 2.0. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- rear facing cam -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- users location -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- accelerometer -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- compass -->
+    <uses-permission android:name="android.permission.ACCESS_GPS" /> <!-- do not support small resolution screens -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>
